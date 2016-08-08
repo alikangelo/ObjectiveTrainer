@@ -23,6 +23,7 @@
 		1CEAED561D590C8100DB544E /* RemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED551D590C8100DB544E /* RemoveAdsViewController.m */; };
 		1CEAED591D590CAC00DB544E /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED581D590CAC00DB544E /* StatsViewController.m */; };
 		1CEAED5C1D590CCF00DB544E /* StatsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED5B1D590CCF00DB544E /* StatsModel.m */; };
+		1CEAED5F1D59154600DB544E /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED5E1D59154600DB544E /* MenuItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,8 @@
 		1CEAED581D590CAC00DB544E /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsViewController.m; path = Stats/StatsViewController.m; sourceTree = "<group>"; };
 		1CEAED5A1D590CCF00DB544E /* StatsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsModel.h; path = Stats/StatsModel.h; sourceTree = "<group>"; };
 		1CEAED5B1D590CCF00DB544E /* StatsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsModel.m; path = Stats/StatsModel.m; sourceTree = "<group>"; };
+		1CEAED5D1D59154600DB544E /* MenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuItem.h; path = Menu/MenuItem.h; sourceTree = "<group>"; };
+		1CEAED5E1D59154600DB544E /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuItem.m; path = Menu/MenuItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +208,8 @@
 			children = (
 				1CEAED4E1D590C0500DB544E /* MenuModel.h */,
 				1CEAED4F1D590C0500DB544E /* MenuModel.m */,
+				1CEAED5D1D59154600DB544E /* MenuItem.h */,
+				1CEAED5E1D59154600DB544E /* MenuItem.m */,
 				1CEAED4B1D590BD900DB544E /* MenuViewController.h */,
 				1CEAED4C1D590BD900DB544E /* MenuViewController.m */,
 			);
@@ -375,6 +380,7 @@
 				1CEAED591D590CAC00DB544E /* StatsViewController.m in Sources */,
 				1CEAED041D59071E00DB544E /* main.m in Sources */,
 				1CEAED5C1D590CCF00DB544E /* StatsModel.m in Sources */,
+				1CEAED5F1D59154600DB544E /* MenuItem.m in Sources */,
 				1CEAED411D590B1F00DB544E /* QuestionViewController.m in Sources */,
 				1CEAED441D590B4B00DB544E /* SWRevealViewController.m in Sources */,
 			);

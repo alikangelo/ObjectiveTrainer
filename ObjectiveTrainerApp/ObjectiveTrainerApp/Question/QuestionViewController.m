@@ -7,6 +7,7 @@
 //
 
 #import "QuestionViewController.h"
+#import "SWRevealViewController.h"
 
 @interface QuestionViewController ()
 
@@ -22,6 +23,8 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+    
+    [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
 }
 
 /*
