@@ -9,12 +9,20 @@
 /* Begin PBXBuildFile section */
 		1CEAED041D59071E00DB544E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED031D59071E00DB544E /* main.m */; };
 		1CEAED071D59071E00DB544E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED061D59071E00DB544E /* AppDelegate.m */; };
-		1CEAED0A1D59071E00DB544E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED091D59071E00DB544E /* ViewController.m */; };
 		1CEAED0D1D59071E00DB544E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEAED0B1D59071E00DB544E /* Main.storyboard */; };
 		1CEAED0F1D59071E00DB544E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CEAED0E1D59071E00DB544E /* Assets.xcassets */; };
 		1CEAED121D59071E00DB544E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CEAED101D59071E00DB544E /* LaunchScreen.storyboard */; };
 		1CEAED1D1D59071F00DB544E /* ObjectiveTrainerAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED1C1D59071F00DB544E /* ObjectiveTrainerAppTests.m */; };
 		1CEAED281D59071F00DB544E /* ObjectiveTrainerAppUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED271D59071F00DB544E /* ObjectiveTrainerAppUITests.m */; };
+		1CEAED411D590B1F00DB544E /* QuestionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED401D590B1F00DB544E /* QuestionViewController.m */; };
+		1CEAED441D590B4B00DB544E /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED431D590B4B00DB544E /* SWRevealViewController.m */; };
+		1CEAED4A1D590B9A00DB544E /* QuestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED491D590B9A00DB544E /* QuestionModel.m */; };
+		1CEAED4D1D590BD900DB544E /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED4C1D590BD900DB544E /* MenuViewController.m */; };
+		1CEAED501D590C0500DB544E /* MenuModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED4F1D590C0500DB544E /* MenuModel.m */; };
+		1CEAED531D590C3B00DB544E /* AboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED521D590C3B00DB544E /* AboutViewController.m */; };
+		1CEAED561D590C8100DB544E /* RemoveAdsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED551D590C8100DB544E /* RemoveAdsViewController.m */; };
+		1CEAED591D590CAC00DB544E /* StatsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED581D590CAC00DB544E /* StatsViewController.m */; };
+		1CEAED5C1D590CCF00DB544E /* StatsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED5B1D590CCF00DB544E /* StatsModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,8 +47,6 @@
 		1CEAED031D59071E00DB544E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CEAED051D59071E00DB544E /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CEAED061D59071E00DB544E /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1CEAED081D59071E00DB544E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		1CEAED091D59071E00DB544E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1CEAED0C1D59071E00DB544E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CEAED0E1D59071E00DB544E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CEAED111D59071E00DB544E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -51,6 +57,24 @@
 		1CEAED231D59071F00DB544E /* ObjectiveTrainerAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ObjectiveTrainerAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CEAED271D59071F00DB544E /* ObjectiveTrainerAppUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ObjectiveTrainerAppUITests.m; sourceTree = "<group>"; };
 		1CEAED291D59071F00DB544E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1CEAED3F1D590B1F00DB544E /* QuestionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionViewController.h; path = Question/QuestionViewController.h; sourceTree = "<group>"; };
+		1CEAED401D590B1F00DB544E /* QuestionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionViewController.m; path = Question/QuestionViewController.m; sourceTree = "<group>"; };
+		1CEAED421D590B4B00DB544E /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = Reveal/SWRevealViewController.h; sourceTree = "<group>"; };
+		1CEAED431D590B4B00DB544E /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = Reveal/SWRevealViewController.m; sourceTree = "<group>"; };
+		1CEAED481D590B9A00DB544E /* QuestionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = QuestionModel.h; path = Question/QuestionModel.h; sourceTree = "<group>"; };
+		1CEAED491D590B9A00DB544E /* QuestionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = QuestionModel.m; path = Question/QuestionModel.m; sourceTree = "<group>"; };
+		1CEAED4B1D590BD900DB544E /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuViewController.h; path = Menu/MenuViewController.h; sourceTree = "<group>"; };
+		1CEAED4C1D590BD900DB544E /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuViewController.m; path = Menu/MenuViewController.m; sourceTree = "<group>"; };
+		1CEAED4E1D590C0500DB544E /* MenuModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MenuModel.h; path = Menu/MenuModel.h; sourceTree = "<group>"; };
+		1CEAED4F1D590C0500DB544E /* MenuModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuModel.m; path = Menu/MenuModel.m; sourceTree = "<group>"; };
+		1CEAED511D590C3B00DB544E /* AboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AboutViewController.h; path = About/AboutViewController.h; sourceTree = "<group>"; };
+		1CEAED521D590C3B00DB544E /* AboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AboutViewController.m; path = About/AboutViewController.m; sourceTree = "<group>"; };
+		1CEAED541D590C8100DB544E /* RemoveAdsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RemoveAdsViewController.h; path = RemoveAds/RemoveAdsViewController.h; sourceTree = "<group>"; };
+		1CEAED551D590C8100DB544E /* RemoveAdsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RemoveAdsViewController.m; path = RemoveAds/RemoveAdsViewController.m; sourceTree = "<group>"; };
+		1CEAED571D590CAC00DB544E /* StatsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsViewController.h; path = Stats/StatsViewController.h; sourceTree = "<group>"; };
+		1CEAED581D590CAC00DB544E /* StatsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsViewController.m; path = Stats/StatsViewController.m; sourceTree = "<group>"; };
+		1CEAED5A1D590CCF00DB544E /* StatsModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatsModel.h; path = Stats/StatsModel.h; sourceTree = "<group>"; };
+		1CEAED5B1D590CCF00DB544E /* StatsModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatsModel.m; path = Stats/StatsModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,9 +127,14 @@
 			children = (
 				1CEAED051D59071E00DB544E /* AppDelegate.h */,
 				1CEAED061D59071E00DB544E /* AppDelegate.m */,
-				1CEAED081D59071E00DB544E /* ViewController.h */,
-				1CEAED091D59071E00DB544E /* ViewController.m */,
 				1CEAED0B1D59071E00DB544E /* Main.storyboard */,
+				1CEAED351D59095400DB544E /* Reveal */,
+				1CEAED361D59098900DB544E /* Question */,
+				1CEAED3B1D5909DB00DB544E /* Helpers */,
+				1CEAED3A1D5909C200DB544E /* RemoveAds */,
+				1CEAED391D5909BC00DB544E /* About */,
+				1CEAED381D5909A300DB544E /* Menu */,
+				1CEAED371D59099D00DB544E /* Stats */,
 				1CEAED0E1D59071E00DB544E /* Assets.xcassets */,
 				1CEAED101D59071E00DB544E /* LaunchScreen.storyboard */,
 				1CEAED131D59071E00DB544E /* Info.plist */,
@@ -138,6 +167,73 @@
 				1CEAED291D59071F00DB544E /* Info.plist */,
 			);
 			path = ObjectiveTrainerAppUITests;
+			sourceTree = "<group>";
+		};
+		1CEAED351D59095400DB544E /* Reveal */ = {
+			isa = PBXGroup;
+			children = (
+				1CEAED421D590B4B00DB544E /* SWRevealViewController.h */,
+				1CEAED431D590B4B00DB544E /* SWRevealViewController.m */,
+			);
+			name = Reveal;
+			sourceTree = "<group>";
+		};
+		1CEAED361D59098900DB544E /* Question */ = {
+			isa = PBXGroup;
+			children = (
+				1CEAED481D590B9A00DB544E /* QuestionModel.h */,
+				1CEAED491D590B9A00DB544E /* QuestionModel.m */,
+				1CEAED3F1D590B1F00DB544E /* QuestionViewController.h */,
+				1CEAED401D590B1F00DB544E /* QuestionViewController.m */,
+			);
+			name = Question;
+			sourceTree = "<group>";
+		};
+		1CEAED371D59099D00DB544E /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				1CEAED5A1D590CCF00DB544E /* StatsModel.h */,
+				1CEAED5B1D590CCF00DB544E /* StatsModel.m */,
+				1CEAED571D590CAC00DB544E /* StatsViewController.h */,
+				1CEAED581D590CAC00DB544E /* StatsViewController.m */,
+			);
+			name = Stats;
+			sourceTree = "<group>";
+		};
+		1CEAED381D5909A300DB544E /* Menu */ = {
+			isa = PBXGroup;
+			children = (
+				1CEAED4E1D590C0500DB544E /* MenuModel.h */,
+				1CEAED4F1D590C0500DB544E /* MenuModel.m */,
+				1CEAED4B1D590BD900DB544E /* MenuViewController.h */,
+				1CEAED4C1D590BD900DB544E /* MenuViewController.m */,
+			);
+			name = Menu;
+			sourceTree = "<group>";
+		};
+		1CEAED391D5909BC00DB544E /* About */ = {
+			isa = PBXGroup;
+			children = (
+				1CEAED511D590C3B00DB544E /* AboutViewController.h */,
+				1CEAED521D590C3B00DB544E /* AboutViewController.m */,
+			);
+			name = About;
+			sourceTree = "<group>";
+		};
+		1CEAED3A1D5909C200DB544E /* RemoveAds */ = {
+			isa = PBXGroup;
+			children = (
+				1CEAED541D590C8100DB544E /* RemoveAdsViewController.h */,
+				1CEAED551D590C8100DB544E /* RemoveAdsViewController.m */,
+			);
+			name = RemoveAds;
+			sourceTree = "<group>";
+		};
+		1CEAED3B1D5909DB00DB544E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,9 +366,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CEAED0A1D59071E00DB544E /* ViewController.m in Sources */,
+				1CEAED4A1D590B9A00DB544E /* QuestionModel.m in Sources */,
+				1CEAED501D590C0500DB544E /* MenuModel.m in Sources */,
+				1CEAED531D590C3B00DB544E /* AboutViewController.m in Sources */,
+				1CEAED561D590C8100DB544E /* RemoveAdsViewController.m in Sources */,
+				1CEAED4D1D590BD900DB544E /* MenuViewController.m in Sources */,
 				1CEAED071D59071E00DB544E /* AppDelegate.m in Sources */,
+				1CEAED591D590CAC00DB544E /* StatsViewController.m in Sources */,
 				1CEAED041D59071E00DB544E /* main.m in Sources */,
+				1CEAED5C1D590CCF00DB544E /* StatsModel.m in Sources */,
+				1CEAED411D590B1F00DB544E /* QuestionViewController.m in Sources */,
+				1CEAED441D590B4B00DB544E /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
