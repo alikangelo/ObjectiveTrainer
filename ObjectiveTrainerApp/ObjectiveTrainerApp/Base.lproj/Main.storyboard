@@ -16,9 +16,147 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="74A-n1-C8G">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H09-K8-CIJ">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="33" width="384" height="189"/>
+                                        </variation>
+                                    </label>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11H-TF-Da5">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="352" width="384" height="46"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="questionMCAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BkA-mb-K9d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cik-Nf-lpa">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="417" width="384" height="46"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="questionMCAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDK-Gk-DuK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-NZ-uA0">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Button"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="487" width="384" height="46"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="questionMCAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2cv-7l-N3J"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type in your answer (case sensitive):" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ros-gG-JCH">
+                                        <rect key="frame" x="-42" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="188" width="384" height="34"/>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xKb-8B-aWt">
+                                        <rect key="frame" x="-25" y="-30" width="97" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="327" width="384" height="30"/>
+                                        </variation>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHH-oN-dfF">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="103" y="398" width="194" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="blankSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyV-4q-n3z"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-sX-tLZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="8" y="52" width="384" height="246"/>
+                                        </variation>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ouK-MM-8Yq">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Skip"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="346" y="562" width="46" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="skipButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0H-N2-536"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="H09-K8-CIJ"/>
+                                        <exclude reference="11H-TF-Da5"/>
+                                        <exclude reference="Cik-Nf-lpa"/>
+                                        <exclude reference="CqQ-NZ-uA0"/>
+                                        <exclude reference="Ros-gG-JCH"/>
+                                        <exclude reference="xKb-8B-aWt"/>
+                                        <exclude reference="DHH-oN-dfF"/>
+                                        <exclude reference="d5G-sX-tLZ"/>
+                                        <exclude reference="ouK-MM-8Yq"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="600"/>
+                                    <mask key="subviews">
+                                        <include reference="H09-K8-CIJ"/>
+                                        <include reference="11H-TF-Da5"/>
+                                        <include reference="Cik-Nf-lpa"/>
+                                        <include reference="CqQ-NZ-uA0"/>
+                                        <include reference="Ros-gG-JCH"/>
+                                        <include reference="xKb-8B-aWt"/>
+                                        <include reference="DHH-oN-dfF"/>
+                                        <include reference="d5G-sX-tLZ"/>
+                                        <include reference="ouK-MM-8Yq"/>
+                                    </mask>
+                                </variation>
+                            </scrollView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="74A-n1-C8G"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="74A-n1-C8G"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="bfH-Do-YZX"/>
+                    <connections>
+                        <outlet property="blankTextField" destination="xKb-8B-aWt" id="w81-8p-xtp"/>
+                        <outlet property="imageQuestionImageView" destination="d5G-sX-tLZ" id="CZW-if-hfY"/>
+                        <outlet property="instructionLabelForBlank" destination="Ros-gG-JCH" id="fgu-pP-V2f"/>
+                        <outlet property="questionMCAnswer1" destination="11H-TF-Da5" id="ZlV-Li-3xq"/>
+                        <outlet property="questionMCAnswer2" destination="Cik-Nf-lpa" id="Hj4-Hy-Ojd"/>
+                        <outlet property="questionMCAnswer3" destination="CqQ-NZ-uA0" id="8GL-Bf-x8x"/>
+                        <outlet property="questionScrollView" destination="74A-n1-C8G" id="x4D-xC-T7Y"/>
+                        <outlet property="questionText" destination="H09-K8-CIJ" id="yWd-01-h35"/>
+                        <outlet property="skipButton" destination="ouK-MM-8Yq" id="KJA-vy-vvW"/>
+                        <outlet property="submitAnswerForBlankButton" destination="DHH-oN-dfF" id="WAQ-GH-mhd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,13 +9,26 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-enum ScreenType {
+
+typedef enum ScreenType {
     ScreenTypeQuestion,
     ScreenTypeStats,
     ScreenTypeAbout,
     ScreenTypeRemoveAds
-};
+} MenuItemScreenType;
 
+typedef enum QuestionType {
+    QuestionTypeMC,
+    QuestionTypeBlank,
+    QuestionTypeImage
+} QuizQuestionType;
+
+
+typedef enum QuestionDifficulty {
+    QuestionDifficultyEasy,
+    QuestionDifficultyMedium,
+    QuestionDifficultyHard
+} QuizQuestionDifficulty;
 
 int main(int argc, char * argv[]) {
     @autoreleasepool {
