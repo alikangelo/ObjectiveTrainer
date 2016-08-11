@@ -27,6 +27,7 @@
 		1CEAED621D59CAA600DB544E /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED611D59CAA600DB544E /* Question.m */; };
 		1CEAED641D5B1BEC00DB544E /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CEAED631D5B1BEC00DB544E /* Questions.json */; };
 		1CEAED671D5C71B600DB544E /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED661D5C71B600DB544E /* ResultView.m */; };
+		1CEAED691D5CA70B00DB544E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEAED681D5CA70B00DB544E /* MessageUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +87,7 @@
 		1CEAED631D5B1BEC00DB544E /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
 		1CEAED651D5C71B600DB544E /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultView.h; path = Question/ResultView.h; sourceTree = "<group>"; };
 		1CEAED661D5C71B600DB544E /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultView.m; path = Question/ResultView.m; sourceTree = "<group>"; };
+		1CEAED681D5CA70B00DB544E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CEAED691D5CA70B00DB544E /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +119,7 @@
 		1CEAECF61D59071D00DB544E = {
 			isa = PBXGroup;
 			children = (
+				1CEAED681D5CA70B00DB544E /* MessageUI.framework */,
 				1CEAED011D59071E00DB544E /* ObjectiveTrainerApp */,
 				1CEAED1B1D59071F00DB544E /* ObjectiveTrainerAppTests */,
 				1CEAED261D59071F00DB544E /* ObjectiveTrainerAppUITests */,
