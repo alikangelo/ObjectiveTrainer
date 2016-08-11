@@ -1,0 +1,27 @@
+{
+    "easy" : 
+    [
+        {
+            "type" : "mc",
+            "question" : "sample question",
+            "answer0" : "first possible answer",
+            "answer1" : "second possible answer",
+            "answer2" : "third possible answer",
+            "correctanswer" : 0
+        },
+        {
+            "type" : "image",
+            "imagename" : "image01",
+            "x_coord" : 50,
+            "y_coord" : 50
+        },
+        {
+            "type" : "blank",
+            "question" : "sample question",
+            "correctanswer" : "test"
+        }
+    ],
+    "medium" : [],
+    "hard" : []
+    
+}

@@ -29,8 +29,9 @@
                                             <rect key="frame" x="8" y="33" width="384" height="189"/>
                                         </variation>
                                     </label>
-                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="11H-TF-Da5">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="11H-TF-Da5">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="8" y="352" width="384" height="46"/>
@@ -39,8 +40,9 @@
                                             <action selector="questionMCAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="BkA-mb-K9d"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cik-Nf-lpa">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Cik-Nf-lpa">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="8" y="417" width="384" height="46"/>
@@ -49,8 +51,9 @@
                                             <action selector="questionMCAnswer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xDK-Gk-DuK"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-NZ-uA0">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="CqQ-NZ-uA0">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <state key="normal" title="Button"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="8" y="487" width="384" height="46"/>
@@ -73,19 +76,9 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="8" y="327" width="384" height="30"/>
+                                            <rect key="frame" x="8" y="327" width="289" height="30"/>
                                         </variation>
                                     </textField>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHH-oN-dfF">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <state key="normal" title="Submit"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="103" y="398" width="194" height="30"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="blankSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyV-4q-n3z"/>
-                                        </connections>
-                                    </button>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d5G-sX-tLZ">
                                         <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
@@ -102,6 +95,16 @@
                                             <action selector="skipButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c0H-N2-536"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHH-oN-dfF">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <state key="normal" title="Submit"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="305" y="327" width="87" height="30"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="blankSubmitted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dyV-4q-n3z"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <variation key="default">
                                     <mask key="subviews">
@@ -111,9 +114,9 @@
                                         <exclude reference="CqQ-NZ-uA0"/>
                                         <exclude reference="Ros-gG-JCH"/>
                                         <exclude reference="xKb-8B-aWt"/>
-                                        <exclude reference="DHH-oN-dfF"/>
                                         <exclude reference="d5G-sX-tLZ"/>
                                         <exclude reference="ouK-MM-8Yq"/>
+                                        <exclude reference="DHH-oN-dfF"/>
                                     </mask>
                                 </variation>
                                 <variation key="widthClass=compact" fixedFrame="YES">
@@ -125,9 +128,9 @@
                                         <include reference="CqQ-NZ-uA0"/>
                                         <include reference="Ros-gG-JCH"/>
                                         <include reference="xKb-8B-aWt"/>
-                                        <include reference="DHH-oN-dfF"/>
                                         <include reference="d5G-sX-tLZ"/>
                                         <include reference="ouK-MM-8Yq"/>
+                                        <include reference="DHH-oN-dfF"/>
                                     </mask>
                                 </variation>
                             </scrollView>

@@ -25,6 +25,8 @@
 		1CEAED5C1D590CCF00DB544E /* StatsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED5B1D590CCF00DB544E /* StatsModel.m */; };
 		1CEAED5F1D59154600DB544E /* MenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED5E1D59154600DB544E /* MenuItem.m */; };
 		1CEAED621D59CAA600DB544E /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED611D59CAA600DB544E /* Question.m */; };
+		1CEAED641D5B1BEC00DB544E /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CEAED631D5B1BEC00DB544E /* Questions.json */; };
+		1CEAED671D5C71B600DB544E /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED661D5C71B600DB544E /* ResultView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,9 @@
 		1CEAED5E1D59154600DB544E /* MenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuItem.m; path = Menu/MenuItem.m; sourceTree = "<group>"; };
 		1CEAED601D59CAA600DB544E /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Question.h; path = Question/Question.h; sourceTree = "<group>"; };
 		1CEAED611D59CAA600DB544E /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Question.m; path = Question/Question.m; sourceTree = "<group>"; };
+		1CEAED631D5B1BEC00DB544E /* Questions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Questions.json; sourceTree = "<group>"; };
+		1CEAED651D5C71B600DB544E /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultView.h; path = Question/ResultView.h; sourceTree = "<group>"; };
+		1CEAED661D5C71B600DB544E /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultView.m; path = Question/ResultView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +157,7 @@
 		1CEAED021D59071E00DB544E /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1CEAED631D5B1BEC00DB544E /* Questions.json */,
 				1CEAED031D59071E00DB544E /* main.m */,
 			);
 			name = "Supporting Files";
@@ -193,6 +199,8 @@
 				1CEAED611D59CAA600DB544E /* Question.m */,
 				1CEAED3F1D590B1F00DB544E /* QuestionViewController.h */,
 				1CEAED401D590B1F00DB544E /* QuestionViewController.m */,
+				1CEAED651D5C71B600DB544E /* ResultView.h */,
+				1CEAED661D5C71B600DB544E /* ResultView.m */,
 			);
 			name = Question;
 			sourceTree = "<group>";
@@ -350,6 +358,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CEAED121D59071E00DB544E /* LaunchScreen.storyboard in Resources */,
+				1CEAED641D5B1BEC00DB544E /* Questions.json in Resources */,
 				1CEAED0F1D59071E00DB544E /* Assets.xcassets in Resources */,
 				1CEAED0D1D59071E00DB544E /* Main.storyboard in Resources */,
 			);
@@ -377,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1CEAED4A1D590B9A00DB544E /* QuestionModel.m in Sources */,
+				1CEAED671D5C71B600DB544E /* ResultView.m in Sources */,
 				1CEAED621D59CAA600DB544E /* Question.m in Sources */,
 				1CEAED501D590C0500DB544E /* MenuModel.m in Sources */,
 				1CEAED531D590C3B00DB544E /* AboutViewController.m in Sources */,
