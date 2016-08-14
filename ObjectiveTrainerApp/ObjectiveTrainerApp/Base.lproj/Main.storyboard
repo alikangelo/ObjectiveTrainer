@@ -193,6 +193,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="bfH-Do-YZX"/>
                     <connections>
+                        <outlet property="answerHeaderLabel" destination="d5G-sX-tLZ" id="NL0-YU-BVo"/>
                         <outlet property="blankTextField" destination="xKb-8B-aWt" id="w81-8p-xtp"/>
                         <outlet property="imageQuestionImageView" destination="d5G-sX-tLZ" id="CZW-if-hfY"/>
                         <outlet property="questionHeaderLabel" destination="RxH-ye-GVB" id="Ypt-BM-aEH"/>

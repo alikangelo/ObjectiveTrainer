@@ -27,6 +27,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *questionMCAnswer1;
 @property (weak, nonatomic) IBOutlet UIButton *questionMCAnswer2;
 @property (weak, nonatomic) IBOutlet UIButton *questionMCAnswer3;
+@property (weak, nonatomic) IBOutlet UIImageView *answerHeaderLabel;
 
 // Properties for Blank Questions
 
