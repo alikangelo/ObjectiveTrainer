@@ -39,6 +39,11 @@
     return self.menuItems.count;
 }
 
+- (float)tableView: (UITableView *)tableView heightForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
+{
+    return 60.0;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(nonnull NSIndexPath *)indexPath
 {
     // Retrieve cell
@@ -48,8 +53,13 @@
     // Get menu item that it's asking for
     MenuItem *item = self.menuItems[indexPath.row];
     
+    // Get image view
+    UIImageView *iconImageView = (UIImageView *)[menuCell viewWithTag:2];
+    UILabel *menuItemTitle = (UILabel *)[menuCell viewWithTag:1];
+    
     // Set menu item text and icon
-    menuCell.textLabel.text = item.menuTitle;
+    menuItemTitle.text = item.menuTitle;
+    iconImageView.image = [UIImage imageNamed:item.menuIcon];
     
     return menuCell;
 }
