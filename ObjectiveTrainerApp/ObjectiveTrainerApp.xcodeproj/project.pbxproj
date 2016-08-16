@@ -28,6 +28,7 @@
 		1CEAED641D5B1BEC00DB544E /* Questions.json in Resources */ = {isa = PBXBuildFile; fileRef = 1CEAED631D5B1BEC00DB544E /* Questions.json */; };
 		1CEAED671D5C71B600DB544E /* ResultView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CEAED661D5C71B600DB544E /* ResultView.m */; };
 		1CEAED691D5CA70B00DB544E /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CEAED681D5CA70B00DB544E /* MessageUI.framework */; };
+		1CF2804E1D631DCF00B60896 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CF2804D1D631DCF00B60896 /* iAd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,7 @@
 		1CEAED651D5C71B600DB544E /* ResultView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ResultView.h; path = Question/ResultView.h; sourceTree = "<group>"; };
 		1CEAED661D5C71B600DB544E /* ResultView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ResultView.m; path = Question/ResultView.m; sourceTree = "<group>"; };
 		1CEAED681D5CA70B00DB544E /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1CF2804D1D631DCF00B60896 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +97,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CF2804E1D631DCF00B60896 /* iAd.framework in Frameworks */,
 				1CEAED691D5CA70B00DB544E /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -119,6 +122,7 @@
 		1CEAECF61D59071D00DB544E = {
 			isa = PBXGroup;
 			children = (
+				1CF2804D1D631DCF00B60896 /* iAd.framework */,
 				1CEAED681D5CA70B00DB544E /* MessageUI.framework */,
 				1CEAED011D59071E00DB544E /* ObjectiveTrainerApp */,
 				1CEAED1B1D59071F00DB544E /* ObjectiveTrainerAppTests */,
@@ -626,6 +630,7 @@
 				1CEAED2E1D59071F00DB544E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CEAED2F1D59071F00DB544E /* Build configuration list for PBXNativeTarget "ObjectiveTrainerAppTests" */ = {
 			isa = XCConfigurationList;
@@ -634,6 +639,7 @@
 				1CEAED311D59071F00DB544E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1CEAED321D59071F00DB544E /* Build configuration list for PBXNativeTarget "ObjectiveTrainerAppUITests" */ = {
 			isa = XCConfigurationList;
@@ -642,6 +648,7 @@
 				1CEAED341D59071F00DB544E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
