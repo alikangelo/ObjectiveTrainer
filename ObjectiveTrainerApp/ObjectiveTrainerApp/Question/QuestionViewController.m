@@ -51,21 +51,6 @@
     
     // Display a random question
     [self randomizeQuestionForDisplay];
-    
-    // Add background behind status bar
-    UIView *statusBarBg = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 20)];
-    statusBarBg.backgroundColor = [UIColor colorWithRed:11/255.0 green:187/255 blue:115/255 alpha:1.0];
-    [self.view addSubview:statusBarBg];
-    
-    // Set button styles
-    UIColor *buttonBorderColor = [UIColor colorWithRed:232/255.0 green:232/255.0 blue:232/255.0 alpha:1.0];
-    
-    [self.questionMCAnswer1.layer setBorderWidth:1.0];
-    [self.questionMCAnswer2.layer setBorderWidth:1.0];
-    [self.questionMCAnswer3.layer setBorderWidth:1.0];
-    [self.questionMCAnswer1.layer setBorderColor:buttonBorderColor.CGColor];
-    [self.questionMCAnswer2.layer setBorderColor:buttonBorderColor.CGColor];
-    [self.questionMCAnswer3.layer setBorderColor:buttonBorderColor.CGColor];
 }
 
 - (void)viewDidAppear:(BOOL)animated
@@ -82,9 +67,16 @@
     _dimmedBackground.backgroundColor = [UIColor blackColor];
     _dimmedBackground.alpha = 0.4;
     
-    // Create iAd banner and place at bottom
-    _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, 320, 50)];
-    _adView.delegate = self;
+    // Check flag to see if we should show the ad
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+    
+    NSString *flag = [defaults objectForKey:@"removeads"];
+/*
+    if (![flag isEqualToString:@"bought"])
+    {    // Create iAd banner and place at bottom
+        _adView = [[ADBannerView alloc] initWithFrame:CGRectMake(0, self.view.frame.size.height, 320, 50)];
+        _adView.delegate = self;
+    }*/
 }
 
 
@@ -116,14 +108,26 @@
     buttonFrame.origin.y = 2000;
     self.questionMCAnswer1.frame = buttonFrame;
     
-    CGRect buttonFrame = self.questionMCAnswer2.frame;
+    CGRect buttonBulletFrame = self.questionMCAnswer1Bullet.frame;
+    buttonBulletFrame.origin.y = 2000;
+    self.questionMCAnswer1Bullet.frame = buttonBulletFrame;
+    
+    buttonFrame = self.questionMCAnswer2.frame;
     buttonFrame.origin.y = 2000;
     self.questionMCAnswer2.frame = buttonFrame;
     
-    CGRect buttonFrame = self.questionMCAnswer3.frame;
+    buttonBulletFrame = self.questionMCAnswer2Bullet.frame;
+    buttonBulletFrame.origin.y = 2000;
+    self.questionMCAnswer2Bullet.frame = buttonBulletFrame;
+
+    buttonFrame = self.questionMCAnswer3.frame;
     buttonFrame.origin.y = 2000;
     self.questionMCAnswer3.frame = buttonFrame;
-    
+
+    buttonBulletFrame = self.questionMCAnswer3Bullet.frame;
+    buttonBulletFrame.origin.y = 2000;
+    self.questionMCAnswer3Bullet.frame = buttonBulletFrame;
+
     // Set fill in the blank elements off the screen
     buttonFrame = self.submitAnswerForBlankButton.frame;
     buttonFrame.origin.y = 2000;
@@ -132,6 +136,8 @@
     buttonFrame = self.blankTextField.frame;
     buttonFrame.origin.y = 2000;
     self.blankTextField.frame = buttonFrame;
+    
+    self.submittedAnswerLabel.alpha = 0;
     
     // Set alpha for image view to 0, so that we can fade it in
     self.imageQuestionImageView.alpha = 0.0;
@@ -192,13 +198,18 @@
     self.questionStatusLabel.text = @"Multiple Choice";
     
     // Adjust scrollview
-    self.questionScrollView.contentSize = CGSizeMake(self.questionScrollView.frame.size.width, self.skipButton.frame.origin.y + self.skipButton.frame.size.height + 30);
+    self.questionScrollView.contentSize = CGSizeMake(self.questionScrollView.frame.size.width, self.skipButton.frame.origin.y + self.skipButton.frame.size.height);
     
     // Animate the labels and buttons back to their positions
     [UIView animateWithDuration:1 animations:^(void){
         
         // Fade question text in
         self.questionText.alpha = 1.0;
+        
+        // Position answer background
+        CGRect answerBackgroundFrame = self.answerBackgroundView.frame;
+        answerBackgroundFrame.origin.y = 218;
+        self.answerBackgroundView.frame = answerBackgroundFrame;
         
     }];
     
@@ -208,15 +219,17 @@
                      animations:^(void){
                          
                          // Position answer 1 text
+                         self.questionMCAnswer1.alpha = 1;
                          CGRect answerButton1Frame = self.questionMCAnswer1.frame;
-                         answerButton1Frame.origin.y = 259;
+                         answerButton1Frame.origin.y = 218;
                          self.questionMCAnswer1.frame = answerButton1Frame;
                          
-                         // Slide up answer background with question
-                         CGRect answerBackgroundFrame = self.answerBackgroundView.frame;
-                         answerBackgroundFrame.origin.y = 227;
-                         self.answerBackgroundView.frame = answerBackgroundFrame;
+                         self.questionMCAnswer1Bullet.alpha = 1;
+                         CGRect answerButtonBullet1Frame = self.questionMCAnswer1Bullet.frame;
+                         answerButtonBullet1Frame.origin.y = 218;
+                         self.questionMCAnswer1Bullet.frame = answerButtonBullet1Frame;
                          
+                         [self positionStatusBar:234]
                      }
                      completion:nil];
     
@@ -226,9 +239,15 @@
                      animations:^(void){
                          
                          // Position answer 2 text
+                         self.questionMCAnswer2.alpha = 1;
                          CGRect answerButton2Frame = self.questionMCAnswer2.frame;
-                         answerButton2Frame.origin.y = 329;
+                         answerButton2Frame.origin.y = 318;
                          self.questionMCAnswer2.frame = answerButton2Frame;
+                         
+                         self.questionMCAnswer2Bullet.alpha = 1;
+                         CGRect answerButtonBullet2Frame = self.questionMCAnswer2Bullet.frame;
+                         answerButtonBullet2Frame.origin.y = 318;
+                         self.questionMCAnswer2Bullet.frame = answerButtonBullet2Frame;
                          
                      }
                      completion:nil];
@@ -239,10 +258,16 @@
                      animations:^(void){
                          
                          // Position answer 3 text
+                         self.questionMCAnswer3.alpha = 1;
                          CGRect answerButton3Frame = self.questionMCAnswer3.frame;
-                         answerButton3Frame.origin.y = 397;
+                         answerButton3Frame.origin.y = 418;
                          self.questionMCAnswer3.frame = answerButton3Frame;
                          
+                         self.questionMCAnswer3Bullet.alpha = 1;
+                         CGRect answerButtonBullet3Frame = self.questionMCAnswer3Bullet.frame;
+                         answerButtonBullet3Frame.origin.y = 418;
+                         self.questionMCAnswer3Bullet.frame = answerButtonBullet3Frame;
+
                      }
                      completion:nil];
     
@@ -255,14 +280,21 @@
     [self hideAllQuestionElements];
     
     // Set image question
+    self.questionText.text = @"What is wrong with the code below? \n\n Tap the error.";
+    self.questionText.alpha = 1.0;
     
-    // Set Image and resize imageview
+    // Set Image
     UIImage *tempImage = [UIImage imageNamed:_currentQuestion.questionImageName];
     self.imageQuestionImageView.image = tempImage;
     
+    // Get aspect ratio of image
+    double aspect = tempImage.size.height/tempImage.size.width;
+    
+    // Resize imageview
     CGRect imageViewFrame = self.imageQuestionImageView.frame;
-    imageViewFrame.size.height = tempImage.size.height;
-    imageViewFrame.size.width = tempImage.size.width;
+    imageViewFrame.size.width = self.view.frame.size.width
+    imageViewFrame.size.height = tempImage.size.width * aspect;
+    imageViewFrame.origin.y = 531 - imageViewFrame.size.height;
     self.imageQuestionImageView.frame = imageViewFrame;
     
     // Create tappable part
@@ -290,6 +322,23 @@
     // Set question status label
     self.questionStatusLabel.text = @"Find The Error";
     
+    // Animate the elements in
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^(void){
+                         
+                         // Position the status bar
+                         [self positionStatusBar:531];
+                         
+                         // Position answer background
+                         CGRect answerBackgroundFrame = self.answerBackgroundView.frame;
+                         answerBackgroundFrame.origin.y = 531;
+                         self.answerBackgroundView.frame = answerBackgroundFrame;
+                         
+                     }
+                     completion:nil];
+
     
     // Animate the elements in
     [UIView animateWithDuration:0.5
@@ -331,13 +380,20 @@
     [self hideAllQuestionElements];
     
     // Set question image for fill in the blank question
+    self.questionText.text = @"What is missing below? \n\n Type in the missing keyword.";
+    self.questionText.alpha = 1.0;
+    
     UIImage *tempImage = [UIImage imageNamed:_currentQuestion.questionImageName];
     self.imageQuestionImageView.image = tempImage;
     
+    // Get aspect ratio of image
+    double aspect = tempImage.size.height/tempImage.size.width;
+    
     // Resize imageview
     CGRect imageViewFrame = self.imageQuestionImageView.frame;
-    imageViewFrame.size.height = tempImage.size.height;
-    imageViewFrame.size.width = tempImage.size.width;
+    imageViewFrame.size.width = self.view.frame.size.width;
+    imageViewFrame.size.height = tempImage.size.width * aspect;
+    imageViewFrame.origin.y = 350 - imageViewFrame.size.height;
     self.imageQuestionImageView.frame = imageViewFrame;
     
     // Set instruction label text and Y-offset
@@ -351,9 +407,24 @@
     self.questionStatusLabel.text = @"Fill In The Blank";
     
     // Adjust scrollview
-    self.questionScrollView.contentSize = CGSizeMake(self.questionScrollView.frame.size.width, self.skipButton.frame.origin.y + self.skipButton.frame.size.height + 30);
+    self.questionScrollView.contentSize = CGSizeMake(self.questionScrollView.frame.size.width, self.skipButton.frame.origin.y + self.skipButton.frame.size.height);
 
     // Animate the elements in
+    [UIView animateWithDuration:0.5
+                          delay:0
+                        options:UIViewAnimationOptionCurveEaseOut
+                     animations:^(void){
+                         
+                         // Position the answer background and status bar
+                         [self positionStatusBar:350];
+                         
+                         CGRect answerBackgroundFrame = self.answerBackgroundView.frame;
+                         answerBackgroundFrame.origin.y = 350;
+                         self.answerBackgroundView.frame = answerBackgroundFrame;
+                         
+                     }
+                     completion:nil];
+    
     [UIView animateWithDuration:0.5
                           delay:0.5
                         options:UIViewAnimationOptionCurveEaseOut
@@ -382,13 +453,15 @@
                          self.answerHeaderLabel.frame = answerLabelFrame;
                          
                          // Reveal and slide up the textbox
+                         self.blankTextField.alpha = 1;
                          CGRect textboxFrame = self.blankTextField.frame;
-                         textboxFrame.origin.y = self.answerHeaderLabel.frame.origin.y + self.answerHeaderLabel.frame.size.height + 20;
+                         textboxFrame.origin.y = 400;
                          self.blankTextField.frame = textboxFrame;
                          
                          // Reveal and slide up the submit button
+                         self.submitAnswerForBlankButton.alpha = 1;
                          CGRect buttonFrame = self.submitAnswerForBlankButton.frame;
-                         buttonFrame.origin.y = self.answerHeaderLabel.frame.origin.y + self.answerHeaderLabel.frame.size.height + 20;
+                         buttonFrame.origin.y = 400;
                          self.submitAnswerForBlankButton.frame = buttonFrame;
                          
                      }
@@ -407,11 +480,36 @@
     [self displayCurrentQuestion];
 }
 
+- (void)positionStatusBar:(int)yorigin
+{
+    // Position status bar
+    CGRect statusBarFrame = self.statusBarBackground.frame;
+    statusBarFrame.origin.y = yorigin;
+    self.statusBarBackground.frame = statusBarFrame;
+    
+    // Position question type label
+    CGRect questionTypeFrame = self.statusBarQuestionTypeLabel.frame;
+    questionTypeFrame.origin.y = yorigin;
+    self.statusBarQuestionTypeLabel.frame = questionTypeFrame;
+    
+    // Position difficulty label
+    CGRect questionDifficultyFrame = self.statusBarQuestionDifficultyLabel.frame;
+    questionDifficultyFrame.origin.y = yorigin;
+    self.statusBarQuestionDifficultyLabel.frame = questionDifficultyFrame;
+    
+    // Position score label
+    CGRect scoreFrame = self.statusBarScoreLabel.frame;
+    scoreFrame.origin.y = yorigin;
+    self.statusBarScoreLabel.frame = scoreFrame;
+}
 
 #pragma mark Question Answer Handlers
 
 - (IBAction)skipButtonClicked:(id)sender
 {
+    
+    // When skip/next button is clicked, make sure title is Skip
+    [self.skipButton setTitle:@"Skip" forState:UIControlStateNormal];
     
     // Animate the elements in
     [UIView animateWithDuration:0.5
@@ -431,11 +529,11 @@
 }
 
 
-- (IBAction)questionMCAnswer:(id)sender)
+- (IBAction)questionMCAnswer:(id)sender
 {
     UIButton *selectedButton = (UIButton *)sender;
     BOOL isCorrect = NO;
-    
+    /*
     NSString *userAnswer = @"";
     switch (selectedButton.tag)
     {
@@ -450,7 +548,7 @@
         break;
     default:
         break;
-    }
+    }*/
     
     if (selectedButton.tag == _currentQuestion.correctMCQuestionIndex)
     {
@@ -465,21 +563,55 @@
     {
         // User got it wrong
     }
+    
+    // Animate and fade the incorrect answers
+    [UIView animateWithDuration:0.5
+                     animations:^(void){
+                     
+                         if (_currentQuestion.correctMCQuestionIndex != 1)
+                         {
+                             self.questionMCAnswer1.alpha = 0;
+                             self.questionMCAnswer1Bullet.alpha = 0;
+                         }
+                         
+                         if (_currentQuestion.correctMCQuestionIndex != 2)
+                         {
+                             self.questionMCAnswer2.alpha = 0;
+                             self.questionMCAnswer2Bullet.alpha = 0;
+                         }
+                         
+                         if (_currentQuestion.correctMCQuestionIndex != 3)
+                         {
+                             self.questionMCAnswer3.alpha = 0;
+                             self.questionMCAnswer3Bullet.alpha = 0;
+                         }
+
+                     }];
 
     // Display message for answer
-    [_resultView showResultForTextQuestion:isCorrect forUserAnswer:userAnswer forQuestion:_currentQuestion];
+    // [_resultView showResultForTextQuestion:isCorrect forUserAnswer:userAnswer forQuestion:_currentQuestion];
+    
+    self.questionText.text = isCorrect ? @"Correct!" : @"Incorrect!";
     
     // Save the question data
     [self saveQuestionsData:_currentQuestion.questionType withDifficulty:_currentQuestion.questionDifficulty isCorrect:isCorrect];
+    
+    // Change skip to next
+    [self.skipButton setTitle:@"Next" forState:UIControlStateNormal];
 }
 
 - (void)imageQuestionAnswered
 {
     // User got it right
     
-    // Display message for correct answer
-    [_resultView showResultForImageQuestion:YES forQuestion:_currentQuestion];
+    // Create point to show the spotlight
+    int tappable_x = self.imageQuestionImageView.frame.origin.x + _currentQuestion.offset_x - 10;
+    int tappable_y = self.imageQuestionImageView.frame.origin.y + _currentQuestion.offset_y - 10;
+    CGPoint spotlight = CGPointMake(tappable_x, tappable_y);
     
+    // Display message for correct answer
+    [self.view addSubview:_resultView];
+    [_resultView showImageResultAt:spotlight forResult:@"Correct!"];
     
     [self saveQuestionsData:_currentQuestion.questionType withDifficulty:_currentQuestion.questionDifficulty isCorrect:YES];
 }
@@ -492,6 +624,15 @@
 
     // Get answer
     NSString *answer = self.blankTextField.text;
+
+    // Hide the text box and go button
+    self.blankTextField.alpha = 0;
+    self.submitAnswerForBlankButton.alpha = 0;
+
+    // Show submitted answer label
+    self.submittedAnswerLabel.text = answer;
+    self.submittedAnswerLabel.alpha = 1;
+    
     BOOL isCorrect = NO;
     
     // Check if answer is right
@@ -509,10 +650,15 @@
     self.blankTextField.text = @"";
     
     // Display message for correct answer
-    [_resultView showResultForImageQuestion:YES forQuestion:_currentQuestion];
+    // [_resultView showResultForImageQuestion:YES forQuestion:_currentQuestion];
     
+    self.questionText.text = isCorrect ? @"Correct!" : [NSString stringWithFormat:@"Incorrect: \n %@", _currentQuestion.correctAnswerForBlank];
+
     // Record question data
     [self saveQuestionsData:_currentQuestion.questionType withDifficulty:_currentQuestion.questionDifficulty isCorrect:isCorrect];
+    
+    // Change skip button to next button
+    [self.skipButton setTitle:@"Next" forState:UIControlStateNormal];
 }
 
 - (void)saveQuestionsData:(QuizQuestionType)type withDifficulty:(QuizQuestionDifficulty)difficulty isCorrect:(BOOL)correct
@@ -592,21 +738,7 @@
                         options:UIViewAnimationOptionCurveEaseOut
                      animations:^(void){
                          
-                         _dimmedBackground.alpha = 0;
-                         
-                     }
-                     completion:^(BOOL finished) {
-                         [_dimmedBackground removeFromSuperview];
-                     }];
-    
-    [UIView animateWithDuration:0.5
-                          delay:0.1
-                        options:UIViewAnimationOptionCurveEaseOut
-                     animations:^(void){
-                         
-                         CGRect resultViewFrame = _resultView.frame;
-                         resultViewFrame.origin.y = 2000;
-                         _resultView.frame = resultViewFrame;
+                         _resultView.alpha = 0;
                          
                      }
                      completion:^(BOOL finished) {
@@ -711,6 +843,8 @@
         self.questionScrollView.frame = scrollViewFrame;
     }
 }
+
+
 
 /*
 #pragma mark - Navigation
